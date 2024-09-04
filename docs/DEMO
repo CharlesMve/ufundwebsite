@@ -1,0 +1,30 @@
+Sprint 1 Demo
+
+List all the needs (name, cost, quantity, etc.) in the cupboard.     
+curl.exe -X GET 'http://localhost:8080/cupboard/needs'
+
+Create a need in the cupboard (cost, quantity and type).
+curl.exe -X POST -H 'Content-Type:application/json' 'http://localhost:8080/cupboard/needs' -d '{\"name\": \"Need1\", \"cost\": 2, \"quantity\" : 4}'
+
+Delete a need in the cupboard.
+curl.exe -i -X DELETE 'http://localhost:8080/cupboard/needs/1'
+
+Retrieve a specific need.
+curl.exe -X GET 'http://localhost:8080/cupboard/needs/1'
+
+Search for a need by partial name.
+curl.exe -X GET 'http://localhost:8080/cupboard/needs/?name=Updated'
+
+Update the cost, quantity or type of a need in the cupboard.
+curl.exe -i -X PUT -H 'Content-Type:application/json' 'http://localhost:8080/cupboard/needs' -d '{\"id\": 1, \"name\":  \"UpdatedNeed\", \"cost\": 4, \"quantity\": 8}'
+
+
+DEMO STEPS                                  
+curl.exe -X POST -H 'Content-Type:application/json' 'http://localhost:8080/cupboard/needs' -d '{\"name\": \"NeedOne\", \"cost\": 1, \"quantity\" : 3}'
+curl.exe -X POST -H 'Content-Type:application/json' 'http://localhost:8080/cupboard/needs' -d '{\"name\": \"NeedTwo\", \"cost\": 2, \"quantity\" : 4}'
+curl.exe -X GET 'http://localhost:8080/cupboard/needs'
+curl.exe -X GET 'http://localhost:8080/cupboard/needs/1'
+curl.exe -X GET 'http://localhost:8080/cupboard/needs/?name=One'
+curl.exe -i -X PUT -H 'Content-Type:application/json' 'http://localhost:8080/cupboard/needs' -d '{\"id\": 4, \"name\":  \"UpdatedNeedOne\", \"cost\": 3, \"quantity\": 9}'
+curl.exe -i -X DELETE 'http://localhost:8080/cupboard/needs/5'
+curl.exe -X GET 'http://localhost:8080/cupboard/needs'
