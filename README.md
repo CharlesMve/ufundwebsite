@@ -1,13 +1,6 @@
 # U-Fund: Supporting Great Minds (STEM Funding)
 
 An online U-Fund system built in Java 17=> and Maven, Rest & Angular
-  
-## Team
-
-- Jaden Jovanelly (jrj1556)
-- JC Mve Mvondo (jum9487)
-- Hakan Gul (hag4126)
-- Christian Issacs (cri2765)
 
 
 ## Prerequisites
