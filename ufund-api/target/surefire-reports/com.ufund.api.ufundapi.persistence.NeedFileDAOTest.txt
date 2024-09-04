@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.ufund.api.ufundapi.persistence.NeedFileDAOTest
+-------------------------------------------------------------------------------
+Tests run: 11, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.105 s <<< FAILURE! - in com.ufund.api.ufundapi.persistence.NeedFileDAOTest
+testFindNeeds  Time elapsed: 0 s  <<< ERROR!
+java.lang.UnsupportedOperationException: Unimplemented method 'findNeeds'
+	at com.ufund.api.ufundapi.persistence.NeedFileDAOTest.testFindNeeds(NeedFileDAOTest.java:69)
+
