@@ -1,0 +1,55 @@
+<h2 *ngIf="showNeedsList">My Cupboard</h2>
+<div *ngIf="!loginService.getIsAdmin()" class="user-money">
+  <span>Current Balance: {{ currentUserMoney }}</span>
+</div>
+<!-- <h2 *ngIf="!showNeedsList">My Cupboard</h2> -->
+
+<div *ngIf="showNeedsList">
+  <label for="need-name">Need Name: </label>
+  <input id="need-name" #needName />
+  <label for="need-cost">Need Cost: </label>
+  <input id="need-cost" type="number" #needCost />
+  <label for="need-quantity">Need Quantity: </label>
+  <input id="need-quantity" type="number" #needQuantity>
+
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button type="button" class="add-button" (click)="add(needName.value, needCost.value, needQuantity.value); needName.value=''; needCost.value=''; needQuantity.value='';">
+    Add need
+  </button>
+</div>
+
+<ul class="needs" *ngIf="!showNeedsList">
+  <h1>Funding Basket</h1>
+  <li *ngFor="let need of fundingBasket">
+    <a routerLink="/detail/{{need.id}}">
+      <span class="badge">{{need.id}}</span> {{need.name}} - In Cart: {{need.quantity}}
+    </a>
+    <br>
+    <div>Cost: {{need.cost}} - Total: {{need.cost * need.quantity}}</div>
+    <br>
+    <button type="button" class="delete" title="add need"
+      (click)="removeNeed(need)">Remove</button>
+    <button type="button" class="share" title="check out" 
+      (click)="checkOut(need)">Check Out</button>
+  </li>
+</ul>
+
+<ul class="needs">
+  <h1 *ngIf="!showNeedsList">Available Needs</h1>
+  <li *ngFor="let need of needs" class="need-background">
+    <a routerLink="/detail/{{need.id}}">
+      <span class="badge">{{need.id}}</span> {{need.name}} - Remaining {{need.quantity}}
+    </a>
+    <br>
+    <div>Cost: {{need.cost}}</div>
+    <br>
+    <button type="button" class="delete" title="delete need" *ngIf="showNeedsList"
+      (click)="delete(need)">x</button>
+    <button type="button" class="share" title="share need" *ngIf="!showNeedsList"
+      (click)="shareNeed(need)">Share</button>
+    <label  *ngIf="!showNeedsList" for="amount">Amount:</label>
+    <input  *ngIf="!showNeedsList" type="number" id="amount" value="1" [(ngModel)]="amount">
+    <button type="button" class="delete" title="add need" *ngIf="!showNeedsList"
+    (click)="addNeed(need, amount, need.quantity)">Add</button>
+  </li>
+</ul>

@@ -1,0 +1,4 @@
+com\ufund\api\ufundapi\controller\CupboardControllerTest.class
+com\ufund\api\ufundapi\persistence\NeedFileDAOTest.class
+com\ufund\api\ufundapi\model\NeedTest.class
+com\ufund\api\ufundapi\persistence\UfundApiApplicationTests.class

@@ -1,0 +1,17 @@
+com\ufund\api\ufundapi\model\Helper.class
+com\ufund\api\ufundapi\controller\UserController.class
+com\ufund\api\ufundapi\WebConfig.class
+com\ufund\api\ufundapi\model\Basket.class
+com\ufund\api\ufundapi\model\User.class
+com\ufund\api\ufundapi\controller\BasketController.class
+com\ufund\api\ufundapi\controller\CupboardController.class
+com\ufund\api\ufundapi\model\Cupboard.class
+com\ufund\api\ufundapi\persistence\UserFileDAO.class
+com\ufund\api\ufundapi\persistence\NeedDAO.class
+com\ufund\api\ufundapi\UfundApiApplication.class
+com\ufund\api\ufundapi\model\Need.class
+com\ufund\api\ufundapi\persistence\NeedFileDAO.class
+com\ufund\api\ufundapi\model\Authentication.class
+com\ufund\api\ufundapi\model\Manager.class
+com\ufund\api\ufundapi\persistence\BasketDAO.class
+com\ufund\api\ufundapi\persistence\UserDAO.class

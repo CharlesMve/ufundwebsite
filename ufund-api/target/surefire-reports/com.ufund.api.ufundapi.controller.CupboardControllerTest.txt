@@ -1,0 +1,32 @@
+-------------------------------------------------------------------------------
+Test set: com.ufund.api.ufundapi.controller.CupboardControllerTest
+-------------------------------------------------------------------------------
+Tests run: 16, Failures: 7, Errors: 0, Skipped: 0, Time elapsed: 1.243 s <<< FAILURE! - in com.ufund.api.ufundapi.controller.CupboardControllerTest
+testGetNeedHandleException  Time elapsed: 1.171 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <500 INTERNAL_SERVER_ERROR> but was: <404 NOT_FOUND>
+	at com.ufund.api.ufundapi.controller.CupboardControllerTest.testGetNeedHandleException(CupboardControllerTest.java:83)
+
+testUpdateNeed  Time elapsed: 0.008 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <200 OK> but was: <404 NOT_FOUND>
+	at com.ufund.api.ufundapi.controller.CupboardControllerTest.testUpdateNeed(CupboardControllerTest.java:151)
+
+testCreateNeedFailed  Time elapsed: 0.008 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <409 CONFLICT> but was: <500 INTERNAL_SERVER_ERROR>
+	at com.ufund.api.ufundapi.controller.CupboardControllerTest.testCreateNeedFailed(CupboardControllerTest.java:119)
+
+testUpdateNeedHandleException  Time elapsed: 0.008 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <500 INTERNAL_SERVER_ERROR> but was: <404 NOT_FOUND>
+	at com.ufund.api.ufundapi.controller.CupboardControllerTest.testUpdateNeedHandleException(CupboardControllerTest.java:181)
+
+testSearchNeedesHandleException  Time elapsed: 0 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <500 INTERNAL_SERVER_ERROR> but was: <404 NOT_FOUND>
+	at com.ufund.api.ufundapi.controller.CupboardControllerTest.testSearchNeedesHandleException(CupboardControllerTest.java:244)
+
+testSearchNeedes  Time elapsed: 0 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <200 OK> but was: <404 NOT_FOUND>
+	at com.ufund.api.ufundapi.controller.CupboardControllerTest.testSearchNeedes(CupboardControllerTest.java:229)
+
+testGetNeedesHandleException  Time elapsed: 0.008 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <500 INTERNAL_SERVER_ERROR> but was: <404 NOT_FOUND>
+	at com.ufund.api.ufundapi.controller.CupboardControllerTest.testGetNeedesHandleException(CupboardControllerTest.java:211)
+
